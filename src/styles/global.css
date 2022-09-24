@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-glassy {
+  @apply bg-slate-100/[.06] dark:bg-slate-100/[.60] backdrop-blur-xl;
+}

@@ -1,0 +1,18 @@
+---
+import Icon from 'astro-icon';
+
+export interface Props {
+  name: string;
+  icon: string;
+  color: string;
+}
+
+const { color, icon, name } = Astro.props;
+---
+
+<div
+  class={`flex justify-center gap-2 ${color} hover:cursor-pointer px-3 py-2 rounded-full w-full border-solid bg-glassy`}
+>
+  <Icon width="20px" name={icon} />
+  <p>{name}</p>
+</div>
