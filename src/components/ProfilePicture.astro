@@ -1,0 +1,14 @@
+---
+export interface Props {
+  source: string;
+}
+
+const { source } = Astro.props;
+---
+
+<div class="h-56 w-56">
+  <img
+    src={source}
+    class="rounded-full drop-shadow-[5px_15px_15px_rgba(255,255,255,0.25)]"
+  />
+</div>
