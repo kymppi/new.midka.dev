@@ -7,11 +7,9 @@ const { label } = Astro.props;
 ---
 
 <div
-  class="rounded-xl bg-glassy w-2/5 mx-auto mb-10 flex flex-col min-h-[300px] drop-shadow-lg"
+  class="bg-glassy rounded-xl w-2/5 mx-auto mb-10 flex flex-col min-h-[300px] drop-shadow-lg"
 >
-  <h1
-    class="text-cyan-600 font-medium text-2xl text-center mb-4 w-full px-3 pt-3 pb-2"
-  >
+  <h1 class="text-black font-medium text-2xl mb-4 w-full px-3 pt-3 pb-2">
     {label}
   </h1>
   <div class="bg-white mx-auto"><slot /></div>

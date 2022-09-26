@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .bg-glassy {
-  @apply bg-slate-100/[.06] dark:bg-slate-100/[.60] backdrop-blur-xl;
+  @apply bg-clip-padding bg-white backdrop-filter backdrop-blur-xl bg-opacity-60;
 }
