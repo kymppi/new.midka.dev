@@ -67,9 +67,7 @@ const technologies: { name: string; color: string; icon: string }[] = [
 ---
 
 <Box label="./tech-stack"
-  ><div
-    class="grid grid-cols-4 gap-4 bg-slate-100/[.06] dark:bg-slate-100/[.60] backdrop-blur-xl"
-  >
+  ><div class="grid grid-cols-2 gap-4 bg-glassy bg-white w-fit bg-opacity-0">
     {
       technologies.map((tech) => (
         <TechnologyCard name={tech.name} icon={tech.icon} color={tech.color} />
