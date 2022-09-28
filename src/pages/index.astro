@@ -1,4 +1,5 @@
 ---
+import MainInfo from '../components/MainInfo.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 ---
@@ -13,7 +14,21 @@ import '../styles/global.css';
   </head>
   <body>
     <BaseLayout>
-      <h1 slot="hero">Hello</h1>
+      <MainInfo slot="hero" />
+      <!-- <div slot="hero">
+        <h2>Midka</h2>
+        <h3>Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quod
+          delectus, laborum dignissimos esse veniam labore at, molestias
+          temporibus magnam hic cum ipsam facilis, natus perferendis dicta
+          corporis. Corrupti, asperiores!
+        </p>
+        <div>1 2 3</div>
+        <div>
+          <img src="/pfp.jpg" alt="profile picture" />
+        </div>
+      </div> -->
     </BaseLayout>
   </body>
 </html>

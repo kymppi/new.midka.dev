@@ -7,8 +7,17 @@ const { source } = Astro.props;
 ---
 
 <div class="h-56 w-56 hover:animate-spin">
-  <img
-    src={source}
-    class="rounded-full drop-shadow-[0px_15px_15px_rgba(255,255,255,0.25)]"
-  />
+  <img src={source} class="rounded-full image" />
 </div>
+
+<!-- drop-shadow-[0px_15px_15px_rgba(255,255,255,0.25)] -->
+
+<style>
+  @tailwind components;
+
+  @layer components {
+    .image {
+      filter: drop-shadow(0 0 35px var(--color-primary));
+    }
+  }
+</style>
