@@ -1,0 +1,20 @@
+---
+import BasicScripts from '../components/BasicScripts.astro';
+import Header from '../components/Header.astro';
+---
+
+<BasicScripts />
+<main
+  class="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 dark:text-white text-black"
+>
+  <section class="min-h-screen">
+    <Header />
+    <slot name="hero" />
+  </section>
+
+  <slot />
+  <!-- Content -->
+
+  <!-- Footer -->
+  <slot name="after-footer" />
+</main>

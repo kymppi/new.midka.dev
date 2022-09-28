@@ -1,10 +1,9 @@
 ---
-import MainInfo from '../components/MainInfo.astro';
-import Technologies from '../components/Technologies.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,10 +11,9 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body
-    class="bg-[url(https://images.unsplash.com/photo-1542224566-6e85f2e6772f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80)]"
-  >
-    <MainInfo />
-    <Technologies />
+  <body>
+    <BaseLayout>
+      <h1 slot="hero">Hello</h1>
+    </BaseLayout>
   </body>
 </html>
