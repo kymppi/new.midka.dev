@@ -4,12 +4,15 @@ import Icon from 'astro-icon';
 const { default: socials } = await import('../../config/socials.json');
 ---
 
-<div class="flex gap-2">
+<div class="m-4 flex gap-2 h-fit justify-center">
   {
     socials.map((item) => (
-      <div>
-        <Icon name={item.icon} />
-      </div>
+      <a href={item.link} target="_blank">
+        <Icon
+          class="h-6 grayscale hover:grayscale-0 hover:scale-110"
+          name={item.icon}
+        />
+      </a>
     ))
   }
 </div>
