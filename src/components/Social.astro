@@ -1,0 +1,15 @@
+---
+import Icon from 'astro-icon';
+
+const { default: socials } = await import('../../config/socials.json');
+---
+
+<div class="flex gap-2">
+  {
+    socials.map((item) => (
+      <div>
+        <Icon name={item.icon} />
+      </div>
+    ))
+  }
+</div>
