@@ -1,0 +1,45 @@
+---
+import Icon from 'astro-icon';
+
+const { default: projects } = await import('../../config/projects.json');
+---
+
+<div>
+  <div class="flex items-center justify-center mb-8">
+    <h1
+      class="font-bold text-3xl text-white dark:text-black m-4 p-4 bg-primary bg-opacity-60 w-fit"
+    >
+      My Projects
+    </h1>
+  </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16"
+  >
+    {
+      projects.map((project) => (
+        <div class="rounded-lg shadow-lg bg-white dark:bg-gray-700 h-full max-w-full   bg-opacity-80 backdrop-filter backdrop-blur-lg">
+          <a href={project.homepage}>
+            <img
+              class="rounded-t-lg p-10 w-full h-36 bg-white dark:bg-gray-600"
+              src={project.image}
+            />
+          </a>
+
+          <div class="p-6 text-black dark:text-white border-x border-b border-gray-200 dark:border-gray-800 rounded-b-lg">
+            <h5>{project.name}</h5>
+            <p>{project.description}</p>
+            <div class="flex justify-end mt-4">
+              <div class="hover:bg-gray-400 h-8 w-8 flex items-center justify-center rounded-lg ">
+                <a href={project.homepage} target="_blank">
+                  <Icon name="akar-icons:link-out" class="m-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<!-- class="mt-6 text-pink-500 hover:bg-gray-300 background-transparent font-bold uppercase text-xs outline-none focus:outline-none ease-linear transition-all duration-150" -->

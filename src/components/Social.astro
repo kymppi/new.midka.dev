@@ -4,7 +4,7 @@ import Icon from 'astro-icon';
 const { default: socials } = await import('../../config/socials.json');
 ---
 
-<div class="m-4 flex gap-2 h-fit justify-center">
+<div class="m-4 mb-0 flex gap-2 h-fit justify-center">
   {
     socials.map((item) => (
       <a href={item.link} target="_blank">
