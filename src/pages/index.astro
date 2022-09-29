@@ -4,31 +4,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>new.midka.dev</title>
   </head>
   <body>
     <BaseLayout>
       <MainInfo slot="hero" />
-      <!-- <div slot="hero">
-        <h2>Midka</h2>
-        <h3>Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quod
-          delectus, laborum dignissimos esse veniam labore at, molestias
-          temporibus magnam hic cum ipsam facilis, natus perferendis dicta
-          corporis. Corrupti, asperiores!
-        </p>
-        <div>1 2 3</div>
-        <div>
-          <img src="/pfp.jpg" alt="profile picture" />
-        </div>
-      </div> -->
     </BaseLayout>
   </body>
 </html>
