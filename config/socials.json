@@ -1,17 +1,21 @@
 [
   {
+    "name": "Twitter",
     "link": "https://twitter.com/devmidka",
     "icon": "logos:twitter"
   },
   {
+    "name": "Github",
     "link": "https://github.com/kymppi",
     "icon": "logos:github-icon"
   },
   {
+    "name": "Matrix",
     "link": "https://matrix.to/#/@midka:matrix.org",
     "icon": "cib:matrix"
   },
   {
+    "name": "Youtube",
     "link": "https://www.youtube.com/channel/UC3_3_Mk4PuRhczYHqOx8P3w",
     "icon": "logos:youtube-icon"
   }
