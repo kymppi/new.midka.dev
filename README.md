@@ -23,9 +23,9 @@ Inside this project, you'll see the following folders and files:
 └── package.json
 ```
 
-In the `config/` there are few `.json` files my configuration (social media, technologies, projects).
+In the `config/` there are few `.json` files with my configuration (social media, technologies, projects).
 
-Images aka static assets are located at `public/` directory. And images/logos for projects are at `public/projects/`.
+Images a.k.a static assets are located at `public/` directory. And images/logos for projects are at `public/projects/`.
 
 ## 🧞 Commands
 
