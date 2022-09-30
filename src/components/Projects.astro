@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import Project from './Project.astro';
 
 const { default: projects } = await import('../../config/projects.json');
 ---
@@ -15,35 +15,7 @@ const { default: projects } = await import('../../config/projects.json');
   <div
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16"
   >
-    {
-      projects.map((project) => (
-        <div class="rounded-lg shadow-lg bg-white dark:bg-gray-700 h-full max-w-full   bg-opacity-80 backdrop-filter backdrop-blur-lg">
-          <a href={project.homepage}>
-            <img
-              class="rounded-t-lg w-full h-36 bg-white dark:bg-gray-600 object-contain"
-              src={project.image}
-              alt={`${project.name}'s logo`}
-            />
-          </a>
-
-          <div class="p-6 text-black dark:text-white border-x border-b border-gray-200 dark:border-gray-800 rounded-b-lg">
-            <h2 class="font-bold text-xl">{project.name}</h2>
-            <p>{project.description}</p>
-            <div class="flex justify-end mt-4">
-              <div class="hover:bg-gray-400 h-8 w-8 flex items-center justify-center rounded-lg ">
-                <a
-                  href={project.homepage}
-                  target="_blank"
-                  aria-label="Open homepage"
-                >
-                  <Icon name="akar-icons:link-out" class="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))
-    }
+    {projects.map((project) => <Project project={project} />)}
   </div>
 </div>
 

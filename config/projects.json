@@ -3,12 +3,14 @@
     "name": "Ritta",
     "homepage": "https://ritta.fi",
     "image": "/projects/ritta.svg",
-    "description": "An open source education system"
+    "description": "An open source education system",
+    "tags": ["typescript", "graphql", "microservices"]
   },
   {
-    "name": "Kasvio (herbarium)",
+    "name": "Kasvio",
     "homepage": "https://github.com/kymppi/kasvio",
     "image": "/projects/kasvio.webp",
-    "description": "A digitial herbarium for my biology class"
+    "description": "A digitial herbarium for my biology class",
+    "tags": ["react", "typescript", "supabase"]
   }
 ]
