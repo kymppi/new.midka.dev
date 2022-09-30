@@ -6,45 +6,9 @@
     "description": "An open source education system"
   },
   {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
-  },
-  {
-    "name": "Ritta",
-    "homepage": "https://ritta.fi",
-    "image": "/projects/ritta.svg",
-    "description": "An open source education system"
+    "name": "Kasvio (herbarium)",
+    "homepage": "https://github.com/kymppi/kasvio",
+    "image": "/projects/kasvio.png",
+    "description": "A digitial herbarium for my biology class"
   }
 ]
