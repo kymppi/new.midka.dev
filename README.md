@@ -1,31 +1,31 @@
-# Astro Starter Kit: Minimal
+# new.midka.dev (🔜 midka.dev)
 
-```
-npm create astro@latest -- --template minimal
-```
+A new personal website at [new.midka.dev](httos://new.midka.dev). Built with [Astro](https://astro.build) 🚀
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 **Looks cool?** Clone the repo and play with it 👍
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside this project, you'll see the following folders and files:
 
 ```
 /
+├── config/
 ├── public/
+│   └── projects/
 ├── src/
 │   └── pages/
 │       └── index.astro
+│   └── components/
+│   └── layouts/
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+In the `config/` there are few `.json` files my configuration (social media, technologies, projects).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Images aka static assets are located at `public/` directory. And images/logos for projects are at `public/projects/`.
 
 ## 🧞 Commands
 
@@ -40,6 +40,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 👀 Want to chat with me?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Sure, you can just email me at [me@midka.dev](mailto:me@midka.dev) or contact me in [Matrix](https://matrix.to/#/@midka:matrix.org) 😊
