@@ -8,10 +8,7 @@ const { default: socials } = await import('../../config/socials.json');
   {
     socials.map((item) => (
       <a href={item.link} target="_blank">
-        <Icon
-          class="h-6 grayscale hover:grayscale-0 hover:scale-110"
-          name={item.icon}
-        />
+        <Icon class="h-6 hover:scale-125" name={item.icon} />
       </a>
     ))
   }
