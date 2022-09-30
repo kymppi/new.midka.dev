@@ -27,6 +27,13 @@ In the `config/` there are few `.json` files with my configuration (social media
 
 Images a.k.a static assets are located at `public/` directory. And images/logos for projects are at `public/projects/`.
 
+## 👩‍💻 Development Setup
+
+1. `git clone https://github.com/kymppi/new.midka.dev`
+2. `cd new.midka.dev`
+3. `yarn install` I recommend yarn, but you can use npm aswell
+4. `yarn dev` for local server at [localhost:3000](http://localhost:3000)
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
