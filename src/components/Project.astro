@@ -39,7 +39,11 @@ const { homepage, image, name, description, tags } = Astro.props.project;
     <p>{description}</p>
     <div class="flex justify-start mt-4">
       <div class="flex max-w-[50px] gap-2">
-        {tags?.map((tag) => <div class="text-xs text-red-300">#{tag}</div>)}
+        {
+          tags?.map((tag) => (
+            <div class="text-xs text-red-700 dark:text-red-300">#{tag}</div>
+          ))
+        }
       </div>
     </div>
   </div>
