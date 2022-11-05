@@ -12,5 +12,19 @@
     "image": "/projects/kasvio.webp",
     "description": "A digitial herbarium for my biology class",
     "tags": ["react", "typescript", "supabase"]
+  },
+  {
+    "name": "Midka-Dev-Tools",
+    "homepage": "https://github.com/kymppi/Midka-Dev-Tools",
+    "image": "https://opengraph.githubassets.com/82927191f63170a1d51a5036976db61f316b23026071c7c36801ce7d01a89656/kymppi/Midka-Dev-Tools",
+    "description": "Simple CLI for starting new projects",
+    "tags": ["rust", "cli", "git"]
+  },
+  {
+    "name": "Novu",
+    "homepage": "https://novu.co",
+    "image": "https://super-static-assets.s3.amazonaws.com/1e9f5a51-c4c6-4fca-b6e8-25fa0186f139/images/6860bfab-3c59-4566-a1d8-a5f70813509f.svg",
+    "description": "I have contributed few times, maintainer of the rust sdk, moderator.",
+    "tags": ["rust", "typescript", "novu"]
   }
 ]
