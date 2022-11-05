@@ -7,6 +7,7 @@ import Header from '../components/Header.astro';
 <main
   class="bg-light dark:bg-dark px-10 md:px-20 lg:px-40 dark:text-white text-black"
 >
+  <slot name="before-header" />
   <section class="h-5/6 mb-8">
     <Header />
     <slot name="hero" />
