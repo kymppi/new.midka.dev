@@ -1,0 +1,39 @@
+---
+import Divider from '../Divider.astro';
+import Social from '../Social.astro';
+import FooterLink from './FooterLink.astro';
+import FooterSection from './FooterSection.astro';
+---
+
+<footer class="py-8">
+  <div class="md:flex md:justify-between">
+    <div class="mb-6 md:mb-0">
+      <a href="https://new.midka.dev" class="flex items-center">
+        <img
+          src="/pfp.webp"
+          class="mr-3 h-8 rounded-full hover:animate-spin"
+          alt="Midka's Face :D"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Midka</span
+        >
+      </a>
+    </div>
+    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+      <FooterSection label="blog">
+        <FooterLink link="/blog/article-1" label="Article 1" />
+        <FooterLink link="/blog/article-2" label="Article 2" />
+      </FooterSection>
+    </div>
+  </div>
+  <Divider />
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2022 <a href="https://new.midka.dev" class="hover:underline">Midka</a>.
+      All Rights Reserved.
+    </span>
+
+    <Social footer />
+  </div>
+</footer>

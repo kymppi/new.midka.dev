@@ -1,5 +1,6 @@
 ---
 import BasicScripts from '../components/BasicScripts.astro';
+import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/Header.astro';
 ---
 
@@ -14,8 +15,8 @@ import Header from '../components/Header.astro';
   </section>
 
   <slot />
-  <!-- Content -->
 
   <!-- Footer -->
+  <Footer />
   <slot name="after-footer" />
 </main>

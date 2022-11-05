@@ -1,19 +1,43 @@
 ---
 import Icon from 'astro-icon';
 
+export interface Props {
+  footer?: boolean;
+}
+
 const { default: socials } = await import('../../config/socials.json');
+const { footer } = Astro.props;
 ---
 
-<div class="m-4 mb-0 flex gap-2 h-fit justify-center">
-  {
-    socials.map((item) => (
-      <a href={item.link} target="_blank" aria-label={item.name}>
-        <Icon
-          class="h-6 hover:scale-125"
-          alt={`${item.icon}_logo`}
-          name={item.icon}
-        />
-      </a>
-    ))
-  }
-</div>
+{
+  footer ? (
+    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+      {socials.map((item) => (
+        <a
+          href={item.link}
+          target="_blank"
+          aria-label={item.name}
+          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+        >
+          <Icon
+            class="h-6 hover:scale-125"
+            alt={`${item.icon}_logo`}
+            name={item.icon}
+          />
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="m-4 mb-0 flex gap-2 h-fit justify-center">
+      {socials.map((item) => (
+        <a href={item.link} target="_blank" aria-label={item.name}>
+          <Icon
+            class="h-6 hover:scale-125"
+            alt={`${item.icon}_logo`}
+            name={item.icon}
+          />
+        </a>
+      ))}
+    </div>
+  )
+}

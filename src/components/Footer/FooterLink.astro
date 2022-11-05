@@ -1,0 +1,12 @@
+---
+export interface Props {
+  link: string;
+  label: string;
+}
+
+const { link, label } = Astro.props;
+---
+
+<li>
+  <a href={link} class="hover:underline">{label}</a>
+</li>
