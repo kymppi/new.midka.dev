@@ -1,0 +1,33 @@
+---
+import BasicScripts from '../components/BasicScripts.astro';
+import Header from '../components/Header.astro';
+---
+
+<BasicScripts />
+<main
+  class="bg-light dark:bg-dark px-10 md:px-20 lg:px-40 dark:text-white text-black h-screen m-0"
+>
+  <Header />
+  <section class="flex items-center grow">
+    <div
+      class="container flex flex-col items-center justify-center px-5 mx-auto my-8"
+    >
+      <div class="max-w-lg text-center">
+        <img src="/icons/not_found.svg" class="mb-8 text-white" />
+
+        <p class="text-2xl font-semibold md:text-3xl">
+          Sorry, we couldn't find this page.
+        </p>
+        <p class="mt-4 mb-8 dark:text-gray-400">
+          But dont worry, you can find plenty of other things on our homepage.
+        </p>
+        <a
+          rel="noopener noreferrer"
+          href="/"
+          class="px-8 py-3 mt-8 font-semibold rounded bg-primary dark:bg-secondary dark:text-gray-900"
+          >Back to homepage</a
+        >
+      </div>
+    </div>
+  </section>
+</main>
