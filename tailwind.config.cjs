@@ -14,6 +14,7 @@ module.exports = {
         // dark: '#004a3a', // #004a3a, #00775d
         // light: '#02c49a',
         accent: '#d473a0',
+        dark: '#434343',
       },
       fontFamily: {
         firacode: ['Fira Code', ...defaultTheme.fontFamily.sans],

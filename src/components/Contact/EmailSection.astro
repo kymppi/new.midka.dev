@@ -18,14 +18,17 @@ const emailParts = email.split('@');
 
 <Section class={`p-8 flex flex-col gap-8 ${styles || ''}`}>
   <a href={`mailto:${email}`}>
-    <h2 class="underline text-xl">
+    <h2 class="text-white dark:text-black underline text-xl">
       <span class="font-bold">{emailParts[0]}@</span>{emailParts[1]}
     </h2>
   </a>
 
   <div class="grow flex flex-col">
     <h3 class="text-black font-firacode">Public Key:</h3>
-    <code class={`grow rounded-2xl px-3 py-1 ${codeClass || ''}`}
+    <code
+      class={`text-white dark:text-black grow rounded-2xl px-3 py-1 ${
+        codeClass || ''
+      }`}
       >{publicKey?.content || 'No Content'}
     </code>
   </div>

@@ -15,6 +15,11 @@
     "icon": "cib:matrix"
   },
   {
+    "name": "Telegram",
+    "link": "https://t.me/midkaaa",
+    "icon": "cib:telegram-plane"
+  },
+  {
     "name": "Youtube",
     "link": "https://www.youtube.com/@midkaa",
     "icon": "mdi:youtube"

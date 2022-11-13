@@ -2,15 +2,19 @@
 import Section from './Section.astro';
 ---
 
-<Section class="bg-white pl-8 pt-8">
-  <h1 class="text-black font-semibold text-3xl font-firacode mb-8">
+<Section class="bg-white dark:bg-dark pl-8 pt-8">
+  <h1
+    class="text-black dark:text-white font-semibold text-3xl font-firacode mb-8"
+  >
     GET IN TOUCH
   </h1>
 
-  <p class="text-black text-xl">
+  <p class="text-black dark:text-white text-xl">
     Any Questions? You can contact me with these. <br />
-    <br /> Please encrypt your emails with <span class="text-pink-500 underline"
-      >OpenPGP</span
+    <br /> Please encrypt your emails with <a
+      href="https://openpgp.org/"
+      target="_blank"
+      class="text-pink-500 underline">OpenPGP</a
     >.
     <br />
     You can find the public key under the email address.
