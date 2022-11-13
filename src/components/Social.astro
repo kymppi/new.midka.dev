@@ -1,43 +1,50 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from 'astro-icon';
 
 export interface Props {
-  footer?: boolean;
+  type?: 'normal' | 'footer' | 'contact';
 }
 
 const { default: socials } = await import('../../config/socials.json');
-const { footer } = Astro.props;
+const { type } = Astro.props;
+
+let wrapperClass = '';
+let linkClass = '';
+let iconClass = '';
+
+switch (type) {
+  case 'footer':
+    wrapperClass = 'mt-4 space-x-6 sm:mt-0';
+    linkClass = 'text-gray-500 hover:text-gray-900 dark:hover:text-white';
+    iconClass = 'h-6 hover:scale-125';
+    break;
+
+  case 'contact':
+    wrapperClass = 'gap-12';
+    linkClass = 'p-4 bg-white rounded-full';
+    iconClass = 'h-6 text-black hover:scale-125';
+    break;
+
+  default:
+  case 'normal':
+    wrapperClass = 'gap-3 h-fit m-4 mb-0';
+    linkClass = '';
+    iconClass = 'h-6 hover:scale-125';
+    break;
+}
 ---
 
-{
-  footer ? (
-    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-      {socials.map((item) => (
-        <a
-          href={item.link}
-          target="_blank"
-          aria-label={item.name}
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-        >
-          <Icon
-            class="h-6 hover:scale-125"
-            alt={`${item.icon}_logo`}
-            name={item.icon}
-          />
-        </a>
-      ))}
-    </div>
-  ) : (
-    <div class="m-4 mb-0 flex gap-3 h-fit justify-center">
-      {socials.map((item) => (
-        <a href={item.link} target="_blank" aria-label={item.name}>
-          <Icon
-            class="h-6 hover:scale-125"
-            alt={`${item.icon}_logo`}
-            name={item.icon}
-          />
-        </a>
-      ))}
-    </div>
-  )
-}
+<div class={`flex justify-center ${wrapperClass}`}>
+  {
+    socials.map((item) => (
+      <a
+        href={item.link}
+        target="_blank"
+        aria-label={item.name}
+        class={linkClass}
+      >
+        <Icon class={iconClass} alt={`${item.icon}_logo`} name={item.icon} />
+      </a>
+    ))
+  }
+</div>

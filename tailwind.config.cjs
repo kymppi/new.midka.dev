@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -5,10 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ff5c00',
-        secondary: '#e851f5',
-        dark: '#004a3a', // #004a3a, #00775d
-        light: '#02c49a',
+        primary: '#5fbac8',
+        primarydark: '#214d53',
+        secondary: '#759e52',
+        secondarydark: '#30560f',
+        // dark: '#004a3a', // #004a3a, #00775d
+        // light: '#02c49a',
+        accent: '#d473a0',
+      },
+      fontFamily: {
+        firacode: ['Fira Code', ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -1,0 +1,36 @@
+---
+import EmailSection from '../components/Contact/EmailSection.astro';
+import InfoSection from '../components/Contact/InfoSection.astro';
+import SocialSection from '../components/Contact/SocialSection.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>new.midka.dev</title>
+  </head>
+  <body>
+    <PageLayout>
+      <section
+        class="grid grid-cols-2 grid-rows-2 h-full w-full grow min-h-screen"
+      >
+        <InfoSection />
+        <EmailSection
+          class="bg-primary"
+          codeClass="bg-primarydark"
+          email="me@midka.dev"
+        />
+        <SocialSection class="bg-accent" />
+        <EmailSection
+          class="bg-secondary"
+          codeClass="bg-secondarydark"
+          email="support@midka.dev"
+        />
+      </section>
+    </PageLayout>
+  </body>
+</html>
