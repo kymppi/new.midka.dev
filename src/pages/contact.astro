@@ -1,7 +1,5 @@
 ---
-import EmailSection from '../components/Contact/EmailSection.astro';
-import InfoSection from '../components/Contact/InfoSection.astro';
-import SocialSection from '../components/Contact/SocialSection.astro';
+import Contact from '../components/Contact/Contact.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 ---
 
@@ -15,22 +13,7 @@ import PageLayout from '../layouts/PageLayout.astro';
   </head>
   <body>
     <PageLayout>
-      <section
-        class="grid grid-cols-2 grid-rows-2 h-full w-full grow min-h-screen"
-      >
-        <InfoSection />
-        <EmailSection
-          class="bg-primary"
-          codeClass="bg-primarydark"
-          email="me@midka.dev"
-        />
-        <SocialSection class="bg-accent" />
-        <EmailSection
-          class="bg-secondary"
-          codeClass="bg-secondarydark"
-          email="support@midka.dev"
-        />
-      </section>
+      <Contact />
     </PageLayout>
   </body>
 </html>

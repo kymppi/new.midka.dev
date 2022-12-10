@@ -1,0 +1,20 @@
+---
+import EmailSection from './EmailSection.astro';
+import InfoSection from './InfoSection.astro';
+import SocialSection from './SocialSection.astro';
+---
+
+<section class="grid grid-cols-1 h-full w-full grow min-h-screen">
+  <InfoSection class="" />
+  <EmailSection
+    class="bg-primary"
+    codeClass="bg-primarydark"
+    email="me@midka.dev"
+  />
+  <EmailSection
+    class="bg-secondary"
+    codeClass="bg-secondarydark"
+    email="support@midka.dev"
+  />
+  <SocialSection class="bg-accent" />
+</section>

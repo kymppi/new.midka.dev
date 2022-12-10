@@ -1,8 +1,13 @@
 ---
 import Section from './Section.astro';
+export interface Props {
+  class?: string;
+}
+
+const { class: styles } = Astro.props;
 ---
 
-<Section class="bg-white dark:bg-dark pl-8 pt-8">
+<Section class={`bg-white dark:bg-dark pl-8 pt-8 ${styles}`}>
   <h1
     class="text-black dark:text-white font-semibold text-3xl font-firacode mb-8"
   >
