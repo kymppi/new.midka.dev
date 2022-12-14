@@ -54,6 +54,7 @@ import '../styles/global.css';
         <section class="grow basis-[375px] h-fit m-8">
           <!-- info about midka -->
           <div
+            id="midka"
             class="w-full h-full border-2 border-gray-200 flex flex-col pt-8 p-2 text-white"
           >
             <div class="w-full flex justify-center">
@@ -78,5 +79,18 @@ import '../styles/global.css';
         </section>
       </div>
     </main>
+    <script>
+      import { animate } from 'motion';
+
+      animate(
+        '#midka',
+        { rotate: 90 },
+        {
+          duration: 0.5,
+          easing: 'ease-in-out',
+          direction: 'alternate',
+        }
+      );
+    </script>
   </body>
 </html>
