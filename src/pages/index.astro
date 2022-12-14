@@ -1,10 +1,9 @@
 ---
-import ProfilePicture from '../components/ProfilePicture.astro';
-import Social from '../components/Social.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 ---
 
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,83 +11,18 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     <title>new.midka.dev</title>
   </head>
-  <body class="">
-    <main class="relative flex min-h-screen">
-      <header class="fixed top-4 w-full flex h-12 z-50">
-        <div
-          class="h-14 w-64 flex items-center justify-center m-auto rounded-full bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border-2 border-gray-800 text-white"
-        >
-          new.midka.dev
-        </div>
-      </header>
-      <div
-        class="flex w-full p-2 px-1 md:px-4 flex-wrap-reverse bg-[url('https://lh3.googleusercontent.com/mot-2VJsFg32nh5OBvfbUfogY5HMoJGQvPQZM4jvZaEtFAeCK6RTqFKgCI2MzotQmuU3v9oCEQIsyWBvWJd-e0ILcbcKNkP7GGDO_xvEwv0vToHnXUfiesdD9tAbbqHfj8iiO86zBQ=w2400')"
-      >
-        <section class="flex-grow flex flex-col basis-[375px]">
-          <!-- grid of projects -->
-          <div
-            class="grid md:grid-cols-2 grid-rows-2 grid-cols-1 h-full gap-4 p-8"
-          >
-            <section
-              class="h-full w-full min-h-[144px] min-w-[144px] grow border-2 border-gray-200 rounded-sm"
-            >
-              Project
-            </section>
-            <section
-              class="h-full w-full min-h-[144px] min-w-[144px] grow border-2 border-gray-200 rounded-sm"
-            >
-              Project
-            </section>
-            <section
-              class="h-full w-full min-h-[144px] min-w-[144px] grow border-2 border-gray-200 rounded-sm"
-            >
-              Project
-            </section>
-            <section
-              class="h-full w-full min-h-[144px] min-w-[144px] grow border-2 border-gray-200 rounded-sm"
-            >
-              Project
-            </section>
-          </div>
-        </section>
-        <section class="grow basis-[375px] h-fit m-8">
-          <!-- info about midka -->
-          <div
-            id="midka"
-            class="w-full h-full border-2 border-gray-200 flex flex-col pt-8 p-2 text-white"
-          >
-            <div class="w-full flex justify-center">
-              <div class="w-40 h-40 mb-4">
-                <ProfilePicture source="/pfp.webp" />
-              </div>
-            </div>
-            <div class="relative w-full h-full bg-cyan">
-              <h1 class="text-white font-bold text-3xl text-center pb-4">
-                Hi! I'm Midka
-              </h1>
-              <p class="min-h-32 h-full pb-12 text-center mx-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis, et ut repudiandae magni maiores vero distinctio id
-                odit molestiae neque
-              </p>
-              <div class="absolute bottom-1 right-1">
-                <Social />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+  <body class="bg-[#2c2c2c]">
+    <Header id="header" />
     <script>
       import { animate } from 'motion';
 
       animate(
-        '#midka',
-        { rotate: 90 },
+        '#header',
         {
-          duration: 0.5,
-          easing: 'ease-in-out',
-          direction: 'alternate',
+          transform: 'translateY(0px)',
+        },
+        {
+          duration: 1,
         }
       );
     </script>
