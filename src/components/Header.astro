@@ -9,7 +9,7 @@ const { ...props } = Astro.props;
 ---
 
 <header
-  class="h-20 flex text-white justify-center items-center px-4 md:px-16 w-full border-b translate-y-[-20rem]"
+  class="h-20 flex text-white justify-center items-center px-4 md:px-16 lg:px-32 w-full border-b translate-y-[-20rem]"
   {...props}
 >
   <h1 class="text-xl font-semibold">new.midka.dev</h1>
@@ -20,9 +20,9 @@ const { ...props } = Astro.props;
       <li class="text-lg font-medium">Contact</li>
     </ul>
   </nav>
-  <div class="hidden items-center justify-center md:flex">
+  <div class="items-center justify-center flex ml-auto">
     <ThemeToggle />
   </div>
   <!-- Show if screen<md (dropdown) -->
-  <div class="ml-auto md:hidden"></div>
+  <!-- <div class="ml-auto md:hidden">hello</div> -->
 </header>

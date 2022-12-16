@@ -27,9 +27,10 @@ switch (type) {
 
   default:
   case 'normal':
-    wrapperClass = 'gap-3 h-fit m-4 mb-0';
+    wrapperClass = 'justify-between h-fit mb-0 max-w-md flex-wrap gap-2';
     linkClass = '';
-    iconClass = 'h-6 hover:scale-125';
+    iconClass =
+      'h-12 md:h-14 hover:scale-125 border border-white rounded-full p-3 text-white';
     break;
 }
 ---
@@ -41,7 +42,7 @@ switch (type) {
         href={item.link}
         target="_blank"
         aria-label={item.name}
-        class={linkClass}
+        class={`min-w-[48px] ${linkClass}`}
       >
         <Icon class={iconClass} alt={`${item.icon}_logo`} name={item.icon} />
       </a>
