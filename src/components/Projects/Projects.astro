@@ -1,18 +1,13 @@
 ---
-import Divider from '../Divider.astro';
 import Project from './Project.astro';
 
 const { default: projects } = await import('../../../config/projects.json');
 ---
 
-<div>
-  <Divider label="My Projects" />
-
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16"
-  >
-    {projects.map((project) => <Project project={project} />)}
-  </div>
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 w-full grow mb-4 md:mb-8"
+>
+  {projects.map((project) => <Project project={project} />)}
 </div>
 
 <!-- class="mt-6 text-pink-500 hover:bg-gray-300 background-transparent font-bold uppercase text-xs outline-none focus:outline-none ease-linear transition-all duration-150" -->
