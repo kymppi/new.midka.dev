@@ -6,11 +6,11 @@ export interface Props {
 const { label } = Astro.props;
 ---
 
-<div class="relative flex py-8 items-center">
+<div class="relative flex items-center py-8">
   <div class="flex-grow border-t border-gray-800 dark:border-gray-400"></div>
   {
     label && (
-      <span class="flex-shrink mx-4 border-gray-800 dark:border-gray-400 text-xl">
+      <span class="mx-4 flex-shrink border-gray-800 text-xl dark:border-gray-400">
         {label}
       </span>
     )

@@ -1,11 +1,11 @@
 ---
-import Project from './Project.astro';
+import Project from "./Project.astro";
 
-const { default: projects } = await import('../../../config/projects.json');
+const { default: projects } = await import("../../../config/projects.json");
 ---
 
 <div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 w-full grow mb-4 md:mb-8"
+  class="mb-4 grid w-full grow grid-cols-1 gap-8 md:mb-8 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4"
 >
   {projects.map((project) => <Project project={project} />)}
 </div>

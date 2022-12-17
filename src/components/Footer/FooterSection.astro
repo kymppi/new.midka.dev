@@ -8,11 +8,11 @@ const { label } = Astro.props;
 
 <div>
   <h2
-    class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+    class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white"
   >
     {label}
   </h2>
-  <ul class="text-gray-600 dark:text-gray-400 gap-4 flex flex-col">
+  <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
     <slot />
   </ul>
 </div>
