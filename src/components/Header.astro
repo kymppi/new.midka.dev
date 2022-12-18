@@ -1,5 +1,4 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro";
 
 export interface Props {
   [key: string]: string;
@@ -20,9 +19,9 @@ const { ...props } = Astro.props;
       <li class="text-lg font-medium">Contact</li>
     </ul>
   </nav>
-  <div class="ml-auto flex items-center justify-center">
+  <!-- <div class="ml-auto flex items-center justify-center">
     <ThemeToggle />
-  </div>
+  </div> -->
   <!-- Show if screen<md (dropdown) -->
   <!-- <div class="ml-auto md:hidden">hello</div> -->
 </header>
