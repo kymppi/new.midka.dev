@@ -1,36 +1,36 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 export interface Props {
-  type?: 'normal' | 'footer' | 'contact';
+  type?: "normal" | "footer" | "contact";
 }
 
-const { default: socials } = await import('../../config/socials.json');
+const { default: socials } = await import("../../config/socials.json");
 const { type } = Astro.props;
 
-let wrapperClass = '';
-let linkClass = '';
-let iconClass = '';
+let wrapperClass = "";
+let linkClass = "";
+let iconClass = "";
 
 switch (type) {
-  case 'footer':
-    wrapperClass = 'mt-4 space-x-6 sm:mt-0';
-    linkClass = 'text-gray-500 hover:text-gray-900 dark:hover:text-white';
-    iconClass = 'h-6 hover:scale-125';
+  case "footer":
+    wrapperClass = "mt-4 space-x-6 sm:mt-0";
+    linkClass = "text-gray-500 hover:text-gray-900 dark:hover:text-white";
+    iconClass = "h-6 hover:scale-125";
     break;
 
-  case 'contact':
-    wrapperClass = 'gap-12';
-    linkClass = 'p-4 bg-white rounded-full';
-    iconClass = 'h-6 text-black hover:scale-125';
+  case "contact":
+    wrapperClass = "gap-12";
+    linkClass = "p-4 bg-white rounded-full";
+    iconClass = "h-6 text-black hover:scale-125";
     break;
 
   default:
-  case 'normal':
-    wrapperClass = 'justify-between h-fit mb-0 max-w-md flex-wrap gap-2';
-    linkClass = '';
+  case "normal":
+    wrapperClass = "justify-between h-fit mb-0 max-w-md flex-wrap gap-2";
+    linkClass = "";
     iconClass =
-      'h-12 md:h-14 hover:scale-125 border border-white rounded-full p-3 text-white';
+      "h-12 md:h-14 hover:scale-125 border border-white rounded-full p-3 text-white";
     break;
 }
 ---

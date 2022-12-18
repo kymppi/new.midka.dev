@@ -1,12 +1,12 @@
 <script is:inline>
   if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add("dark");
   } else {
-    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.remove("dark");
   }
 
   function attachEvent(selector, event, fn) {
@@ -19,11 +19,11 @@
   }
 
   window.onload = function () {
-    attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
-      document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark')
-        ? 'dark'
-        : 'light';
+    attachEvent("[data-aw-toggle-color-scheme]", "click", function () {
+      document.documentElement.classList.toggle("dark");
+      localStorage.theme = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
     });
   };
 </script>

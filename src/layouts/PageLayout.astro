@@ -1,11 +1,11 @@
 ---
-import BasicScripts from '../components/BasicScripts.astro';
-import Header from '../components/Header.astro';
+import BasicScripts from "../components/BasicScripts.astro";
+import Header from "../components/Header.astro";
 ---
 
 <BasicScripts />
 <main
-  class="bg-light dark:bg-dark dark:text-white text-black min-h-screen flex flex-col"
+  class="bg-light flex min-h-screen flex-col text-black dark:bg-dark dark:text-white"
 >
   <slot name="before-header" />
   <section class="mb-8">
@@ -19,5 +19,5 @@ import Header from '../components/Header.astro';
 </main>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap");
 </style>

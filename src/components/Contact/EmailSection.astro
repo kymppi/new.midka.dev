@@ -1,5 +1,5 @@
 ---
-import Section from './Section.astro';
+import Section from "./Section.astro";
 
 export interface Props {
   email: string;
@@ -13,23 +13,23 @@ export interface Props {
 
 const { class: styles, codeClass, email, publicKey } = Astro.props;
 
-const emailParts = email.split('@');
+const emailParts = email.split("@");
 ---
 
-<Section class={`p-8 flex flex-col gap-8 ${styles || ''}`}>
+<Section class={`p-8 flex flex-col gap-8 ${styles || ""}`}>
   <a href={`mailto:${email}`}>
-    <h2 class="text-white dark:text-black underline text-xl">
+    <h2 class="text-xl text-white underline dark:text-black">
       <span class="font-bold">{emailParts[0]}@</span>{emailParts[1]}
     </h2>
   </a>
 
-  <div class="grow flex flex-col">
-    <h3 class="text-black font-firacode">Public Key:</h3>
+  <div class="flex grow flex-col">
+    <h3 class="font-firacode text-black">Public Key:</h3>
     <code
       class={`text-white dark:text-black grow rounded-2xl px-3 py-1 ${
-        codeClass || ''
+        codeClass || ""
       }`}
-      >{publicKey?.content || 'No Content'}
+      >{publicKey?.content || "No Content"}
     </code>
   </div>
 </Section>

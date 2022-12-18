@@ -1,16 +1,16 @@
 ---
-import BasicScripts from '../components/BasicScripts.astro';
-import Header from '../components/Header.astro';
+import BasicScripts from "../components/BasicScripts.astro";
+import Header from "../components/Header.astro";
 ---
 
 <BasicScripts />
 <main
-  class="bg-light dark:bg-dark px-10 md:px-20 lg:px-40 dark:text-white text-black h-screen m-0"
+  class="bg-light m-0 h-screen px-10 text-black dark:bg-dark dark:text-white md:px-20 lg:px-40"
 >
   <Header />
-  <section class="flex items-center grow">
+  <section class="flex grow items-center">
     <div
-      class="container flex flex-col items-center justify-center px-5 mx-auto my-8"
+      class="container mx-auto my-8 flex flex-col items-center justify-center px-5"
     >
       <div class="max-w-lg text-center">
         <img src="/icons/not_found.svg" class="mb-8 text-white" />
@@ -24,7 +24,7 @@ import Header from '../components/Header.astro';
         <a
           rel="noopener noreferrer"
           href="/"
-          class="px-8 py-3 mt-8 font-semibold rounded bg-primary dark:bg-secondary dark:text-gray-900"
+          class="mt-8 rounded bg-primary px-8 py-3 font-semibold dark:bg-secondary dark:text-gray-900"
           >Back to homepage</a
         >
       </div>

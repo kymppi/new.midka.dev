@@ -1,5 +1,4 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
 
 export interface Props {
   [key: string]: string;
@@ -9,20 +8,20 @@ const { ...props } = Astro.props;
 ---
 
 <header
-  class="h-20 flex text-white justify-center items-center px-4 md:px-16 lg:px-32 w-full border-b translate-y-[-20rem]"
+  class="flex h-20 w-full translate-y-[-20rem] items-center justify-center border-b px-4 text-white md:px-16 lg:px-32"
   {...props}
 >
   <h1 class="text-xl font-semibold">new.midka.dev</h1>
   <nav class="mx-auto hidden md:block">
-    <ul class="flex gap-16 items-center justify-center">
+    <ul class="flex items-center justify-center gap-16">
       <li class="text-lg font-medium">About</li>
       <li class="text-lg font-medium">Projects</li>
       <li class="text-lg font-medium">Contact</li>
     </ul>
   </nav>
-  <div class="items-center justify-center flex ml-auto">
+  <!-- <div class="ml-auto flex items-center justify-center">
     <ThemeToggle />
-  </div>
+  </div> -->
   <!-- Show if screen<md (dropdown) -->
   <!-- <div class="ml-auto md:hidden">hello</div> -->
 </header>

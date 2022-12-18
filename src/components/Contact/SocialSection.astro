@@ -1,12 +1,12 @@
 ---
-import Social from '../Social.astro';
-import Section from './Section.astro';
+import Social from "../Social.astro";
+import Section from "./Section.astro";
 
 export interface Props {
   class?: string;
 }
 
-const { class: styles = '' } = Astro.props;
+const { class: styles = "" } = Astro.props;
 ---
 
 <Section class={`flex items-center justify-center  ${styles}`}

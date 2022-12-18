@@ -1,15 +1,15 @@
 ---
-import BasicScripts from '../components/BasicScripts.astro';
-import Footer from '../components/Footer/Footer.astro';
-import Header from '../components/Header.astro';
+import BasicScripts from "../components/BasicScripts.astro";
+import Footer from "../components/Footer/Footer.astro";
+import Header from "../components/Header.astro";
 ---
 
 <BasicScripts />
 <main
-  class="bg-light dark:bg-dark px-10 md:px-20 lg:px-40 dark:text-white text-black"
+  class="bg-light px-10 text-black dark:bg-dark dark:text-white md:px-20 lg:px-40"
 >
   <slot name="before-header" />
-  <section class="h-5/6 mb-8">
+  <section class="mb-8 h-5/6">
     <Header />
     <slot name="hero" />
   </section>

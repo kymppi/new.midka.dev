@@ -1,8 +1,8 @@
 ---
-import Divider from '../Divider.astro';
-import Social from '../Social.astro';
-import FooterLink from './FooterLink.astro';
-import FooterSection from './FooterSection.astro';
+import Divider from "../Divider.astro";
+import Social from "../Social.astro";
+import FooterLink from "./FooterLink.astro";
+import FooterSection from "./FooterSection.astro";
 ---
 
 <footer class="py-8">
@@ -15,12 +15,12 @@ import FooterSection from './FooterSection.astro';
           alt="Midka's Face :D"
         />
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
           >Midka</span
         >
       </a>
     </div>
-    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
       <FooterSection label="blog">
         <FooterLink link="/blog/article-1" label="Article 1" />
         <FooterLink link="/blog/article-2" label="Article 2" />
@@ -32,7 +32,7 @@ import FooterSection from './FooterSection.astro';
     <span class="text-sm text-black dark:text-gray-400 sm:text-center"
       >© 2022 <a
         href="https://new.midka.dev"
-        class="hover:underline hover:text-primary">Midka</a
+        class="hover:text-primary hover:underline">Midka</a
       >. All Rights Reserved.
     </span>
 
