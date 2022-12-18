@@ -40,7 +40,7 @@ const { homepage, image, name, description, tags } = Astro.props.project;
       </div>
       <p>{description}</p>
     </div>
-    <div class="mt-4 flex justify-start dark:bg-lime-500">
+    <div class="mt-4 flex justify-start">
       <div class="flex max-w-[50px] flex-wrap gap-2">
         {tags?.map((tag) => <div class="text-xs text-orange-500">#{tag}</div>)}
       </div>
