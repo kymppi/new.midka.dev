@@ -1,8 +1,8 @@
 [
   {
-    "name": "Twitter",
-    "link": "https://twitter.com/devmidka",
-    "icon": "mdi:twitter"
+    "name": "Mastodon",
+    "link": "https://mastodon.testausserveri.fi/@midka",
+    "icon": "cib:mastodon"
   },
   {
     "name": "Github",
