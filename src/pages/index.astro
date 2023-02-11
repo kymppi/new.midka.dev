@@ -1,8 +1,6 @@
 ---
 import BasicScripts from "../components/BasicScripts.astro";
-import Header from "../components/Header.astro";
-import Projects from "../components/Projects/Projects.astro";
-import Social from "../components/Social.astro";
+import MainHero from "../components/MainHero.astro";
 import "../styles/global.css";
 ---
 
@@ -14,60 +12,8 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>new.midka.dev</title>
   </head>
-  <body class="bg-[#2c2c2c]">
-    <Header id="header" />
-    <div
-      class="flex h-[calc(100vh-5rem)] w-full flex-wrap gap-16 px-4 md:px-16 lg:px-32"
-    >
-      <section
-        class="flex min-h-fit grow basis-[350px] flex-col justify-between pt-4 pb-4 md:pt-16 md:pb-8"
-      >
-        <div class="mb-4">
-          <h2 class="text-5xl font-bold text-white">WHO AM I?</h2>
-          <p class="font-light text-white">
-            - 14 years old <br />
-            - "I use Arch btw" <br />
-            - I like math, physics, programming and rust <br />
-            - i play mostly minecraft and factorio
-          </p>
-        </div>
-        <Social />
-      </section>
-      <div
-        class="flex grow basis-[500px] flex-col pt-4 md:pt-16 lg:basis-[1300px]"
-      >
-        <h2 class="text-5xl font-bold text-white">SHOWCASE</h2>
-        <!-- <section
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full grow mb-4 md:mb-8"
-        >
-          <div class="grow bg-lime-50 rounded-sm">project</div>
-          <div class="grow bg-lime-100 rounded-sm">project</div>
-          <div class="grow bg-lime-200 rounded-sm">project</div>
-          <div class="grow bg-lime-300 rounded-sm">project</div>
-          <div class="grow bg-lime-400 aspect-square">project</div>
-          <div class="grow bg-lime-500 aspect-square">project</div>
-          <div class="grow bg-lime-600 aspect-square">project</div>
-          <div class="grow bg-lime-700 aspect-square">project</div>
-          <div class="grow bg-lime-800 aspect-square">project</div>
-        </section> -->
-        <Projects />
-      </div>
-    </div>
-
+  <body class="h-screen bg-[#252525] text-white">
+    <MainHero />
     <BasicScripts />
-
-    <script>
-      import { animate } from "motion";
-
-      animate(
-        "#header",
-        {
-          transform: "translateY(0px)",
-        },
-        {
-          duration: 1,
-        }
-      );
-    </script>
   </body>
 </html>

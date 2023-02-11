@@ -1,0 +1,43 @@
+---
+import GridCard from "./GridCard.astro";
+import NavigationCard from "./NavigationCard.astro";
+---
+
+<section
+  class="animated-background grid h-full grid-cols-3 grid-rows-4 gap-4 p-4"
+>
+  <NavigationCard />
+  <GridCard>Project 1</GridCard>
+  <GridCard>Project 2</GridCard>
+  <GridCard class="col-span-2 row-span-3">Hello! Info about me</GridCard>
+  <GridCard>Project 3</GridCard>
+  <GridCard>Gallery</GridCard>
+</section>
+
+<style>
+  .animated-background {
+    background: linear-gradient(
+      -53deg,
+      #ffbe0b,
+      #fb5607,
+      #ff006e,
+      #8338ec,
+      #3a86ff
+    );
+    background-size: 400% 400%;
+    animation: gradient 120s ease infinite;
+    height: 100%;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
