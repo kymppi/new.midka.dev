@@ -1,0 +1,20 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props as { entry: CollectionEntry<"projects"> };
+const { Content } = await entry.render();
+---
+
+<h1>{entry.data.title}</h1>
+<p>{entry.data.stack}</p>
+<section class="prose">
+  <Content />
+</section>
