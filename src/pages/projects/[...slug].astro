@@ -14,7 +14,8 @@ const { Content } = await entry.render();
 ---
 
 <h1>{entry.data.title}</h1>
-<p>{entry.data.stack}</p>
+<p>stack: {entry.data.stack.join(" ")}</p>
+<p>published at: {entry.data.publishDate}</p>
 <section class="prose">
   <Content />
 </section>
