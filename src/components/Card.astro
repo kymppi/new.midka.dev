@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  image: string;
+  link: string;
+  tags: { name: string; color: string }[];
+}
+
+const { title, description, publishedAt, image, link, tags } = Astro.props;
+---
+
+<article class="flex max-w-[24rem] grow basis-80 flex-col gap-2">
+  <img
+    src={image}
+    alt={`Cover for ${title}`}
+    class="w-full rounded-bl-3xl rounded-tr-3xl object-cover"
+  />
+  <h2 class="text-lg font-bold">{title}</h2>
+  <p>{description}</p>
+  <div class="flex flex-wrap gap-2">
+    <footer class="flex justify-between">
+      <time class="text-gray-700">{publishedAt.toLocaleString()}</time>
+      <a href={link} class="cursor-pointer text-teal-500 no-underline">
+        Read more ➡
+      </a>
+    </footer>
+  </div>
+</article>

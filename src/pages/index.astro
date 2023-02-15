@@ -1,7 +1,14 @@
 ---
-import BasicScripts from "../components/BasicScripts.astro";
-import MainHero from "../components/MainHero.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
+
+const dprojects = await getCollection("projects", ({ data }) => {
+  return data.draft !== true;
+});
+
+const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
 ---
 
 <html lang="en">
@@ -12,8 +19,31 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>new.midka.dev</title>
   </head>
-  <body class="h-screen bg-[#252525] text-white">
-    <MainHero />
-    <BasicScripts />
+  <body>
+    <BaseLayout class="flex flex-col items-center justify-center">
+      <header class="mb-8 flex flex-col gap-5">
+        <h1 class="text-center text-3xl font-black">Midka</h1>
+        <p class="text-center text-xl">
+          A teen interested in programming, photography and music.
+        </p>
+      </header>
+      <section class="flex flex-col gap-5">
+        <header class="text-4xl font-bold">Latest Projects</header>
+        <div class="flex flex-wrap items-center justify-center gap-12">
+          {
+            projects.map((project) => (
+              <Card
+                title={project.data.title}
+                description={project.data.description}
+                publishedAt={project.data.publishDate}
+                image={project.data.image || "/images/placeholder.png"}
+                link={project.data.canonicalURL || `/projects/${project.slug}`}
+                tags={project.data.tags}
+              />
+            ))
+          }
+        </div>
+      </section>
+    </BaseLayout>
   </body>
 </html>

@@ -19,7 +19,7 @@
   }
 
   window.onload = function () {
-    attachEvent("[data-aw-toggle-color-scheme]", "click", function () {
+    attachEvent("[data-toggle-color-scheme]", "click", function () {
       document.documentElement.classList.toggle("dark");
       localStorage.theme = document.documentElement.classList.contains("dark")
         ? "dark"
