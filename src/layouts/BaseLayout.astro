@@ -13,7 +13,9 @@ const { class: classProp }: Props = Astro.props;
 <main
   class="flex min-h-screen flex-col items-center bg-[#e4e4e4] text-black transition-all ease-in dark:bg-[#101010] dark:text-white"
 >
-  <div class={`w-full max-w-7xl px-16 pt-[4.5rem] ${classProp}`}>
+  <div
+    class={`w-full max-w-7xl px-16 xs:px-4 sm:px-8 pt-[4.5rem] ${classProp}`}
+  >
     <slot />
   </div>
   <Sidebar />
