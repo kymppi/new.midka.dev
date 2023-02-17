@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 import Card from "../components/Card.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 
@@ -36,14 +37,17 @@ const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
                 title={project.data.title}
                 description={project.data.description}
                 publishedAt={project.data.publishDate}
-                image={project.data.image || "/images/placeholder.png"}
+                image={
+                  project.data.image ||
+                  `https://via.placeholder.com/385x200?text=${project.data.title}`
+                }
                 link={project.data.canonicalURL || `/projects/${project.slug}`}
-                tags={project.data.tags}
               />
             ))
           }
         </div>
       </section>
+      <ThemeToggle />
     </BaseLayout>
   </body>
 </html>

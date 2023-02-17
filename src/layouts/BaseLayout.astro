@@ -1,5 +1,6 @@
 ---
 import BasicScripts from "../components/BasicScripts.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 export interface Props {
   class?: string;
@@ -10,9 +11,10 @@ const { class: classProp }: Props = Astro.props;
 
 <BasicScripts />
 <main
-  class="flex min-h-screen flex-col items-center bg-[#e4e4e4] text-black dark:bg-[#101010] dark:text-white"
+  class="flex min-h-screen flex-col items-center bg-[#e4e4e4] text-black transition-all ease-in dark:bg-[#101010] dark:text-white"
 >
   <div class={`w-full max-w-7xl px-16 pt-[4.5rem] ${classProp}`}>
     <slot />
   </div>
+  <Sidebar />
 </main>
