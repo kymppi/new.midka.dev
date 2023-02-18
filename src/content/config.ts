@@ -19,6 +19,9 @@ const definedTags = {
   },
 };
 
+const isDefinedTag = (tag: string): tag is keyof typeof definedTags =>
+  tag in definedTags;
+
 const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -27,16 +30,14 @@ const projectsCollection = defineCollection({
     link: z.string(),
     github_link: z.string().optional(),
     stack: z.array(z.string()),
-    tags: z.array(z.string()).transform((tags) => {
-      if (!tags) return [];
-
-      return tags.map((tag) => {
-        if (!(definedTags as any)[tag])
+    tags: z.array(z.string()).transform((tags) =>
+      tags.map((tag) => {
+        if (!isDefinedTag(tag))
           throw new Error(`Tag ${tag} is not defined in definedTags`);
 
-        return (definedTags as any)[tag];
-      }) as { name: string; color: string }[];
-    }),
+        return definedTags[tag];
+      })
+    ),
     publishDate: z
       .number()
       .transform((unix_time) => new Date(unix_time * 1000)), // Convert unix timestamp to Date, in milliseconds
