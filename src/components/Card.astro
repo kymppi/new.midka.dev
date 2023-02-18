@@ -23,7 +23,10 @@ const { title, description, publishedAt, image, link } = Astro.props;
       <time class="text-gray-700 dark:text-gray-400"
         >{publishedAt.toLocaleString()}</time
       >
-      <a href={link} class="cursor-pointer text-teal-500 no-underline">
+      <a
+        href={link}
+        class="cursor-pointer text-teal-700 no-underline dark:text-teal-500"
+      >
         Read more ➡
       </a>
     </footer>
