@@ -20,7 +20,9 @@ const { title, description, publishedAt, image, link } = Astro.props;
   <p>{description}</p>
   <div class="flex flex-wrap gap-2">
     <footer class="flex w-full justify-between">
-      <time class="text-gray-700 dark:text-gray-400"
+      <time
+        class="text-gray-700 dark:text-gray-400"
+        datetime={publishedAt.toISOString()}
         >{publishedAt.toLocaleString()}</time
       >
       <a
