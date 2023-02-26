@@ -4,19 +4,32 @@ import Sidebar from "../components/Sidebar.astro";
 
 export interface Props {
   class?: string;
+  title?: string;
 }
 
-const { class: classProp }: Props = Astro.props;
+const { class: classProp, title = "new.midka.dev" }: Props = Astro.props;
 ---
 
-<BasicScripts />
-<main
-  class="flex min-h-screen flex-col items-center bg-[#e4e4e4] text-black transition-all ease-in dark:bg-[#101010] dark:text-white"
->
-  <div
-    class={`w-full max-w-7xl px-16 xs:px-4 sm:px-8 pt-[4.5rem] ${classProp}`}
-  >
-    <slot />
-  </div>
-  <Sidebar />
-</main>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <BasicScripts />
+    <!-- bg-[#e4e4e4] -->
+    <main
+      class="flex min-h-screen flex-col items-center bg-zinc-200 text-black transition-all ease-in dark:bg-[#101010] dark:text-white"
+    >
+      <div
+        class={`w-full max-w-7xl px-16 xs:px-4 sm:px-8 pt-[4.5rem] ${classProp}`}
+      >
+        <slot />
+      </div>
+      <Sidebar />
+    </main>
+  </body>
+</html>

@@ -35,7 +35,7 @@ const projectsCollection = defineCollection({
         if (!isDefinedTag(tag))
           throw new Error(`Tag ${tag} is not defined in definedTags`);
 
-        return definedTags[tag];
+        return { ...definedTags[tag], id: tag };
       })
     ),
     publishDate: z

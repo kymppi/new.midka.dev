@@ -1,5 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
+import Badge from "../../components/Badge.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -13,9 +15,41 @@ const { entry } = Astro.props as { entry: CollectionEntry<"projects"> };
 const { Content } = await entry.render();
 ---
 
-<h1>{entry.data.title}</h1>
-<p>stack: {entry.data.stack.join(" ")}</p>
-<p>published at: {entry.data.publishDate}</p>
-<section class="prose">
-  <Content />
-</section>
+<BaseLayout title={`${entry.data.title} | new.midka.dev`}>
+  <header class="mb-8 grid grid-cols-3 gap-5">
+    <a
+      href="/"
+      class="my-auto cursor-pointer text-xl text-teal-700 no-underline dark:text-teal-500"
+    >
+      &larr; Back
+    </a>
+    <h1 class="my-auto text-center text-2xl font-bold">
+      {entry.data.title}
+    </h1>
+    <div class="flex items-center justify-end">
+      <time datetime={entry.data.publishDate.toISOString()} class="my-auto">
+        {entry.data.publishDate.toLocaleString()}
+      </time>
+    </div>
+    <div class="flex gap-2">
+      {
+        entry.data.tags.map((tag) => (
+          // <a
+          //   href={`/tags/${tag.id}`}
+          //   class={`inline-block rounded-full px-2 py-1 text-sm font-medium ${getTagColors(
+          //     tag.color
+          //   )}`}
+          // >
+          //   {tag.name}
+          // </a>
+          <Badge component="a" href={`/tags/${tag.id}`} color={tag.color}>
+            {tag.name}
+          </Badge>
+        ))
+      }
+    </div>
+  </header>
+  <article class="prose prose-zinc prose-teal max-w-none dark:prose-invert">
+    <Content />
+  </article>
+</BaseLayout>

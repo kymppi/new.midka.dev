@@ -12,45 +12,34 @@ const dprojects = await getCollection("projects", ({ data }) => {
 const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>new.midka.dev</title>
-  </head>
-  <body>
-    <BaseLayout class="flex flex-col items-center justify-center">
-      <header class="mb-8 flex flex-col gap-5">
-        <h1 class="text-center text-3xl font-black">Midka</h1>
-        <p class="text-center text-xl">
-          A teen interested in programming, photography and music.
-        </p>
-        <div class="flex">
-          <Button>Contact</Button>
-        </div>
-      </header>
-      <section class="flex flex-col gap-5">
-        <header class="text-4xl font-bold"><h2>Latest Projects</h2></header>
-        <div class="flex flex-wrap items-center justify-center gap-12">
-          {
-            projects.map((project) => (
-              <Card
-                title={project.data.title}
-                description={project.data.description}
-                publishedAt={project.data.publishDate}
-                image={
-                  project.data.image ||
-                  `https://via.placeholder.com/385x200?text=${project.data.title}`
-                }
-                link={project.data.canonicalURL || `/projects/${project.slug}`}
-              />
-            ))
-          }
-        </div>
-      </section>
-      <Button>Say Hello</Button>
-    </BaseLayout>
-  </body>
-</html>
+<BaseLayout class="flex flex-col items-center justify-center">
+  <header class="mb-8 flex flex-col gap-5">
+    <h1 class="text-center text-3xl font-black">Midka</h1>
+    <p class="text-center text-xl">
+      A teen interested in programming, photography and music.
+    </p>
+    <div class="flex">
+      <Button>Contact</Button>
+    </div>
+  </header>
+  <section class="flex flex-col gap-5">
+    <header class="text-4xl font-bold"><h2>Latest Projects</h2></header>
+    <div class="flex flex-wrap items-center justify-center gap-12">
+      {
+        projects.map((project) => (
+          <Card
+            title={project.data.title}
+            description={project.data.description}
+            publishedAt={project.data.publishDate}
+            image={
+              project.data.image ||
+              `https://via.placeholder.com/385x200?text=${project.data.title}`
+            }
+            link={project.data.canonicalURL || `/projects/${project.slug}`}
+          />
+        ))
+      }
+    </div>
+  </section>
+  <Button>Say Hello</Button>
+</BaseLayout>
