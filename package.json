@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "commitizen": "commitizen"
+    "commit": "git-cz"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
