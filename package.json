@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "commitizen": "commitizen"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
@@ -22,14 +23,19 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@commitlint/prompt-cli": "^17.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "astro-robots-txt": "^0.3.12",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "prettier": "2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "svgo": "2.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
