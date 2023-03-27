@@ -16,7 +16,7 @@ const { title = "new.midka.dev", class: className }: Props = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main class="noise-container h-screen">
+    <main class="noise-container z10">
       <div class="noise"></div>
       <div class={className}>
         <slot />
@@ -26,10 +26,20 @@ const { title = "new.midka.dev", class: className }: Props = Astro.props;
 </html>
 
 <style>
+  main {
+    height: 100%;
+    min-height: 100vh;
+  }
+</style>
+
+<style is:global>
+  .z10 {
+    z-index: 10;
+  }
   .noise-container {
     position: relative;
     isolation: isolate;
-    background-color: hsl(var(--clr-background));
+    /* background-color: hsl(var(--clr-background)); */
   }
 
   .noise-underlay {
@@ -42,7 +52,7 @@ const { title = "new.midka.dev", class: className }: Props = Astro.props;
     position: absolute;
     inset: 0;
     background-image: url("/assets/noise.png");
-    opacity: 0.9;
+    opacity: 0.2;
     mix-blend-mode: overlay;
     pointer-events: none;
   }
