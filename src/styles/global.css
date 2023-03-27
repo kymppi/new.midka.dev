@@ -1,10 +1,12 @@
 :root {
   /* Colors */
-  --clr-dark: 0 0% 20%;
-  --clr-primary: 220 100% 17%;
-  --clr-accent: 292 100% 24%;
+  --clr-dark: 0 0% 15%;
+  /* --clr-primary: 195 100% 49%; */
+  --clr-primary: 39 100% 47%;
+  --clr-accent: 292 100% 50%;
   --clr-white: 0 0% 100%;
-  --clr-background: var(--clr-dark);
+  /* --clr-background: 358 64% 37%; */
+  --clr-background: 197 100% 5%;
 
   /* Font-Sizes */
   --fs-900: 9.375rem;
@@ -64,7 +66,7 @@ body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-background) / 0.9);
   line-height: 1.5;
   min-height: 100vh;
 }
