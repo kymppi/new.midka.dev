@@ -1,8 +1,4 @@
 {
-  "plugins": [
-    "prettier-plugin-astro",
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss"
-  ],
+  "plugins": ["prettier-plugin-astro"],
   "pluginSearchDirs": false
 }

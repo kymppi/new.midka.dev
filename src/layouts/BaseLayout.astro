@@ -1,13 +1,10 @@
 ---
-import BasicScripts from "../components/BasicScripts.astro";
-import Sidebar from "../components/Sidebar.astro";
-
 export interface Props {
-  class?: string;
   title?: string;
+  class?: string;
 }
 
-const { class: classProp, title = "new.midka.dev" }: Props = Astro.props;
+const { title = "new.midka.dev", class: className }: Props = Astro.props;
 ---
 
 <html lang="en">
@@ -19,17 +16,34 @@ const { class: classProp, title = "new.midka.dev" }: Props = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <BasicScripts />
-    <!-- bg-[#e4e4e4] -->
-    <main
-      class="flex min-h-screen flex-col items-center bg-zinc-200 text-black transition-all ease-in dark:bg-[#101010] dark:text-white"
-    >
-      <div
-        class={`w-full max-w-7xl px-16 xs:px-4 sm:px-8 pt-[4.5rem] ${classProp}`}
-      >
+    <main class="noise-container h-screen">
+      <div class="noise"></div>
+      <div class={className}>
         <slot />
       </div>
-      <Sidebar />
     </main>
   </body>
 </html>
+
+<style>
+  .noise-container {
+    position: relative;
+    isolation: isolate;
+    background-color: hsl(var(--clr-background));
+  }
+
+  .noise-underlay {
+    z-index: -2;
+    position: relative;
+  }
+
+  .noise {
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/noise.png");
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+</style>

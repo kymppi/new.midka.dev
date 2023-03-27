@@ -1,22 +1,229 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+:root {
+  /* Colors */
+  --clr-dark: 0 0% 20%;
+  --clr-primary: 220 100% 17%;
+  --clr-accent: 292 100% 24%;
+  --clr-white: 0 0% 100%;
+  --clr-background: var(--clr-dark);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  /* Font-Sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Source Sans Pro", sans-serif;
+  /* Font-Families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* ---------- */
+/* Reset      */
+/* ---------- */
 
-* {
+/* Box Sizing */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/*  Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* Body Setup */
+
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Easy Images */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Easy Forms */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prefers-Reduced-Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0, 01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0, 01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+/* use where to keep specificity lower */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+
+.bg-primary {
+  background-color: hsl(var(--clr-primary));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-accent));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+
+.text-primary {
+  color: hsl(var(--clr-primary));
+}
+
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+/* Typography */
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
 }
