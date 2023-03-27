@@ -1,24 +1,28 @@
 ---
-import { CollectionEntry,getCollection } from "astro:content";
-import Card from "../components/Card.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 
-const dprojects = await getCollection("projects", ({ data }) => {
-  return data.draft !== true;
-});
+// const dprojects = await getCollection("projects", ({ data }) => {
+//   return data.draft !== true;
+// });
 
-const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
+// const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
 ---
 
-<BaseLayout class="flex flex-col items-center justify-center">
-  <header class="mb-8 flex flex-col gap-5">
-    <h1 class="text-center text-3xl font-black">Midka</h1>
-    <p class="text-center text-xl">
-      A teen interested in programming, photography and music.
-    </p>
-  </header>
-  <section class="flex flex-col gap-5">
+<BaseLayout class="main grid text-primary">
+  <section class="lastfm">Last.FM</section>
+  <section class="about">About Me</section>
+  <section class="something">something</section>
+  <section class="socials">Socials</section>
+  <section class="project1">Project 1</section>
+  <section class="project2">Project 2</section>
+  <section class="project3">Project 3</section>
+  <section class="project4">Project 4</section>
+  <!-- <header class="">
+    <h1 class="">Midka</h1>
+    <p class="">A teen interested in programming, photography and music.</p>
+  </header> -->
+  <!-- <section class="flex flex-col gap-5">
     <header class="text-4xl font-bold"><h2>Latest Projects</h2></header>
     <div class="flex flex-wrap items-center justify-center gap-12">
       {
@@ -36,5 +40,76 @@ const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
         ))
       }
     </div>
-  </section>
+  </section> -->
 </BaseLayout>
+
+<style lang="scss">
+  .main {
+    --gap: 0.75rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    height: 100vh;
+  }
+
+  section {
+    background-color: white;
+  }
+
+  .lastfm {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .about {
+    grid-row-start: 3;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .something {
+    grid-row-start: 10;
+    grid-row-end: 15;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .socials {
+    grid-row-start: 15;
+    grid-row-end: 17;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .project1 {
+    grid-row-start: 1;
+    grid-row-end: 9;
+    grid-column-start: 5;
+    grid-column-end: 9;
+  }
+
+  .project2 {
+    grid-row-start: 9;
+    grid-row-end: 17;
+    grid-column-start: 5;
+    grid-column-end: 9;
+  }
+
+  .project3 {
+    grid-row-start: 1;
+    grid-row-end: 9;
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
+
+  .project4 {
+    grid-row-start: 9;
+    grid-row-end: 17;
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
+</style>
