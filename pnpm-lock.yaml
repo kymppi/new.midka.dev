@@ -9,7 +9,7 @@ specifiers:
   astro-robots-txt: ^0.3.12
   cz-conventional-changelog: ^3.3.0
   husky: ^8.0.3
-  prettier: 2.8.4
+  prettier: 2.8.7
   prettier-plugin-astro: ^0.8.0
   prettier-plugin-organize-imports: ^3.2.2
   sass: ^1.60.0
@@ -28,9 +28,9 @@ devDependencies:
   astro-robots-txt: 0.3.12
   cz-conventional-changelog: 3.3.0
   husky: 8.0.3
-  prettier: 2.8.4
+  prettier: 2.8.7
   prettier-plugin-astro: 0.8.0
-  prettier-plugin-organize-imports: 3.2.2_silln3pw57har7jydmecgzoypa
+  prettier-plugin-organize-imports: 3.2.2_erhqnhond52bpeyvirmp3gjrp4
   svgo: 2.8.0
   typescript: 4.9.5
 
@@ -57,7 +57,7 @@ packages:
     dependencies:
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
-      prettier: 2.8.4
+      prettier: 2.8.7
       prettier-plugin-astro: 0.7.2
       source-map: 0.7.4
       vscode-css-languageservice: 6.2.3
@@ -3644,7 +3644,7 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 0.31.4
-      prettier: 2.8.4
+      prettier: 2.8.7
       sass-formatter: 0.7.6
       synckit: 0.8.5
     dev: false
@@ -3654,12 +3654,12 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 1.1.1
-      prettier: 2.8.4
+      prettier: 2.8.7
       sass-formatter: 0.7.6
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-organize-imports/3.2.2_silln3pw57har7jydmecgzoypa:
+  /prettier-plugin-organize-imports/3.2.2_erhqnhond52bpeyvirmp3gjrp4:
     resolution: {integrity: sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -3672,12 +3672,12 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.7
       typescript: 4.9.5
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 

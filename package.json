@@ -24,7 +24,7 @@
     "astro-robots-txt": "^0.3.12",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
-    "prettier": "2.8.4",
+    "prettier": "2.8.7",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-organize-imports": "^3.2.2",
     "svgo": "2.8.0",
