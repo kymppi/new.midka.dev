@@ -1,11 +1,10 @@
 :root {
   /* Colors */
+  /* https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226 */
   --clr-dark: 0 0% 15%;
-  /* --clr-primary: 195 100% 49%; */
   --clr-primary: 39 100% 47%;
   --clr-accent: 292 100% 50%;
   --clr-white: 0 0% 100%;
-  /* --clr-background: 358 64% 37%; */
   --clr-background: 197 100% 5%;
 
   /* Font-Sizes */
