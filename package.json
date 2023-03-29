@@ -13,10 +13,12 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "astro": "^2.0.10",
+    "@astrojs/svelte": "^2.1.0",
+    "astro": "^2.1.8",
     "astro-compress": "^1.1.32",
     "astro-icon": "^0.8.0",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "svelte": "^3.54.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
