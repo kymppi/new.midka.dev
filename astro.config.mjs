@@ -2,8 +2,10 @@ import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 
-// https://astro.build/config
 import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,5 +18,7 @@ export default defineConfig({
   },
   experimental: {
     integrations: true
-  }
+  },
+  output: "server",
+  adapter: vercel()
 });

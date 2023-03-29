@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^2.1.0",
+    "@astrojs/vercel": "^3.2.1",
     "astro": "^2.1.8",
     "astro-compress": "^1.1.32",
     "astro-icon": "^0.8.0",
