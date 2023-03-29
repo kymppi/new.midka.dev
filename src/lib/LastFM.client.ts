@@ -1,68 +1,43 @@
-type LastFMRecentTrackResponse =
-  | {
-      artist: { mbid: string; "#text": string };
-      streamable: string;
-      image: { "#text": string; size: string }[];
-      mbid: string;
-      album: { mbid: string; "#text": string };
-      url: string;
-      name: string;
-      date: { uts: string; "#text": string };
-    }
-  | {
-      artist: { mbid: string; "#text": string };
-      streamable: string;
-      image: { "#text": string; size: string }[];
-      mbid: string;
-      album: { mbid: string; "#text": string };
-      url: string;
-      name: string;
-      "@attr": {
-        nowplaying: string;
-      };
-    };
+type LastFMRecentTrackResponse = {
+  artist: { mbid: string; "#text": string };
+  streamable: string;
+  image: { "#text": string; size: string }[];
+  mbid: string;
+  album: { mbid: string; "#text": string };
+  url: string;
+  name: string;
+} & (
+  | { date: { uts: string; "#text": string } }
+  | { "@attr": { nowplaying: string } }
+);
 
-interface LastFMRecentTracksResponse {
-  recenttracks: {
-    track: LastFMRecentTrackResponse[];
-    "@attr": {
-      total: string;
-      page: string;
-      perPage: string;
-      totalPages: string;
-    };
-  };
-}
-
-export interface LastFMRecentTracks {
-  tracks: LastFMTrack[];
+interface PageInfo {
   total: string;
   page: string;
   perPage: string;
   totalPages: string;
 }
 
-export type LastFMTrack =
-  | {
-      artist: LastFMArtist;
-      streamable: string;
-      image: LastFMImage[];
-      mbid: string;
-      album: LastFMAlbum;
-      url: string;
-      name: string;
-      date: Date;
-    }
-  | {
-      artist: LastFMArtist;
-      streamable: string;
-      image: LastFMImage[];
-      mbid: string;
-      album: LastFMAlbum;
-      url: string;
-      name: string;
-      currentlyPlaying: boolean;
-    };
+interface LastFMRecentTracksResponse {
+  recenttracks: {
+    track: LastFMRecentTrackResponse[];
+    "@attr": PageInfo;
+  };
+}
+
+export type LastFMRecentTracks = {
+  tracks: LastFMTrack[];
+} & PageInfo;
+
+export type LastFMTrack = {
+  artist: LastFMArtist;
+  streamable: string;
+  image: LastFMImage[];
+  mbid: string;
+  album: LastFMAlbum;
+  url: string;
+  name: string;
+} & ({ date: Date } | { currentlyPlaying: boolean });
 
 export interface LastFMAlbum {
   mbid: string;
