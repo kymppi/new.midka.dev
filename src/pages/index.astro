@@ -1,5 +1,7 @@
 ---
+import LastFMWidget from "../components/LastFMWidget.svelte";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { LastFMClient } from "../lib/LastFM.client";
 import "../styles/global.css";
 
 // const dprojects = await getCollection("projects", ({ data }) => {
@@ -7,11 +9,16 @@ import "../styles/global.css";
 // });
 
 // const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
+const lastfm = new LastFMClient(import.meta.env.LASTFM_API_KEY || "", "midkaa");
+const lastFMData = {
+  track: (await lastfm.getRecentTracks(1)).tracks[0],
+  user: "midkaa",
+};
 ---
 
 <BaseLayout class="main grid text-primary">
   <section class="lastfm">
-    <div>Last.FM</div>
+    <LastFMWidget data={lastFMData} />
   </section>
   <section class="about noise-container">
     <div class="noise"></div>
