@@ -1,15 +1,14 @@
 <script lang="ts">
-    import type { LastFMTrack } from "../lib/LastFM.client";
+  import type { LastFMTrack } from "../lib/LastFM.client";
 
-    export let data: {
-        track?: LastFMTrack;
-        user: string;
-    };
+  export let data: {
+    track?: LastFMTrack;
+    user: string;
+  };
 </script>
 
-
 {#if data.track}
-	<p>{data.track.name}</p>
+  <p>{data.track.name}</p>
 {:else}
-	<p>Could not load...</p>
+  <p>Could not load...</p>
 {/if}
