@@ -1,5 +1,6 @@
 ---
 import LastFMWidget from "../components/LastFMWidget.svelte";
+import Socials from "../components/Socials.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { LastFMClient } from "../lib/LastFM.client";
 import "../styles/global.css";
@@ -22,7 +23,7 @@ const lastFMData = {
   </section>
   <section class="about noise-container">
     <div class="noise"></div>
-    <div class="noise-underlay">About Me</div>
+    <div class="noise-underlay">Hi! I'm Midka</div>
   </section>
   <section class="something noise-container">
     <div class="noise"></div>
@@ -30,7 +31,9 @@ const lastFMData = {
   </section>
   <section class="socials noise-container">
     <div class="noise"></div>
-    <div class="noise-underlay">Socials</div>
+    <div class="noise-underlay">
+      <Socials />
+    </div>
   </section>
   <section class="project1 noise-container">
     <div class="noise"></div>

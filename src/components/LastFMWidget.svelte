@@ -10,7 +10,7 @@
 <div class="wrapper flex">
   {#if data.track}
     {#if data.track.image[3]}
-      <img src={data.track.image[3].uri} alt={`Cover for ${data.track.name}`} />
+      <img src={data.track.image[3].uri} alt="" />
     {/if}
 
     <div class="info flex">

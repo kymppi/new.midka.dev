@@ -39,12 +39,16 @@ const { title = "new.midka.dev", class: className }: Props = Astro.props;
   .noise-container {
     position: relative;
     isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: hsl(var(--clr-background)); */
   }
 
   .noise-underlay {
     z-index: -2;
     position: relative;
+    width: 100%;
   }
 
   .noise {
