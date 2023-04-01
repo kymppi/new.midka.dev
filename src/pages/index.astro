@@ -1,15 +1,17 @@
 ---
+import { CollectionEntry, getCollection } from "astro:content";
 import LastFMWidget from "../components/LastFMWidget.svelte";
+import ProjectCard from "../components/ProjectCard.astro";
 import Socials from "../components/Socials.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { LastFMClient } from "../lib/LastFM.client";
 import "../styles/global.css";
 
-// const dprojects = await getCollection("projects", ({ data }) => {
-//   return data.draft !== true;
-// });
+const dprojects = await getCollection("projects", ({ data }) => {
+  return data.draft !== true;
+});
 
-// const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
+const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
 const lastfm = new LastFMClient(import.meta.env.LASTFM_API_KEY || "", "midkaa");
 const lastFMData = {
   track: (await lastfm.getRecentTracks(1)).tracks[0],
@@ -37,7 +39,7 @@ const lastFMData = {
   </section>
   <section class="project1 noise-container">
     <div class="noise"></div>
-    <div class="noise-underlay">Project 1</div>
+    <div class="noise-underlay"><ProjectCard project={projects[0]} /></div>
   </section>
   <section class="project2 noise-container">
     <div class="noise"></div>

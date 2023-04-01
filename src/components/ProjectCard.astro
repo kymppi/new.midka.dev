@@ -1,0 +1,11 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+export interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+---
+
+<article>{project.data.image}</article>
