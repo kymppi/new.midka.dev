@@ -116,6 +116,7 @@ export class LastFMClient {
     const response = await fetch(url);
 
     if (!response.ok) {
+      console.error(await response.json());
       throw new Error(
         `Request with method ${method} failed with status ${response.status}`
       );
