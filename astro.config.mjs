@@ -1,6 +1,6 @@
+import compress from "astro-compress";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
 
 import svelte from "@astrojs/svelte";
 
@@ -13,12 +13,9 @@ export default defineConfig({
   integrations: [robotsTxt(), compress(), svelte()],
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
-  },
-  experimental: {
-    integrations: true
+      external: ["svgo"],
+    },
   },
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
 });
