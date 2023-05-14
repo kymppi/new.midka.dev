@@ -1,10 +1,8 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import LastFMWidget from "../components/LastFMWidget.svelte";
 import ProjectCard from "../components/ProjectCard.astro";
 import Socials from "../components/Socials.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { LastFMClient } from "../lib/LastFM.client";
 import "../styles/global.css";
 
 const dprojects = await getCollection("projects", ({ data }) => {
@@ -12,16 +10,16 @@ const dprojects = await getCollection("projects", ({ data }) => {
 });
 
 const projects: CollectionEntry<"projects">[] = Array(3).fill(dprojects[0]);
-const lastfm = new LastFMClient(import.meta.env.LASTFM_API_KEY || "", "midkaa");
-const lastFMData = {
-  track: (await lastfm.getRecentTracks(1)).tracks[0],
-  user: "midkaa",
-};
+// const lastfm = new LastFMClient(import.meta.env.LASTFM_API_KEY || "", "midkaa");
+// const lastFMData = {
+//   track: (await lastfm.getRecentTracks(1)).tracks[0],
+//   user: "midkaa",
+// };
 ---
 
 <BaseLayout class="main grid text-primary">
   <section class="lastfm">
-    <LastFMWidget data={lastFMData} />
+    <!-- <LastFMWidget data={lastFMData} /> -->
   </section>
   <section class="about noise-container">
     <div class="noise"></div>
